@@ -1,184 +1,119 @@
 import * as React from "react"
+import Login from '../assets/login.mp4'
+import styled from "styled-components";
+import "@fontsource/roboto"
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
 
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
+const Container = styled.div`
+width: 800px;
+font-family: "Roboto";
+`
 
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
 
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-}
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-// data
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
 
 // markup
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Home Page</title>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
-        <span role="img" aria-label="Party popper emojis">
-          🎉🎉🎉
-        </span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time.{" "}
-        <span role="img" aria-label="Sunglasses smiley emoji">
-          😎
-        </span>
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
+      <Container>
+        <h1>Introduction</h1>
+
+        <p>Van Cal is a Web application I built to demonstrate my web development skills. It solves a
+          real world problem I encountered in running my own removals business. The solution
+          provides an integrated booking and invoicing application for removals companies. I have
+          generalised the application to be a SAAS application. Any removal company can create their
+          own account in the application or sign in with their google account and create and manage
+          their own data.
+        </p>
+
+        <h1>The Pre-Existing Solution</h1>
+
+        <p>Prior to VanCal I Used Google Calendar to manage my bookings , it has some great features
+          but also some drawbacks.</p>
+
+        <h2>Google Calendar : Pros</h2>
+
+        <ul>
+          <li>It allows colleagues to share their calendars</li>
+          <li>I can view colleagues availability in the same place that I make my bookings.</li>
+          <li>I can invite colleagues to events and see clearly when they have accepted the invite.</li>
+          <li>the week view has a very nice layout which communicates a lot of info at a glance and
+            helps with scheduling new bookings
           </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
-  )
+        </ul>
+
+        <h2>Google Calendar : Cons</h2>
+
+        <ul>
+          <li>More or less all the information for the booking goes in one field. i need more
+            atomicity with certain pieces of data e.g. storing the bill amount.
+          </li>
+          <li>The lack of atomic fields means i also need to maintain a seperate spread sheet of
+            bookings to keep records and manage invoicing
+          </li>
+          <li>this leads to a lot of duplicated data and the following associated problems
+            <ul>
+              <li>wastes time</li>
+              <li>increased chance of errors</li>
+              <li>fall behind with record keeping</li>
+            </ul>
+          </li>
+          <li>google calendar is not an extensible solution, a custom application could solve the problems associated with
+            Google calendar as well as make new functionality in other
+            domains possible and further increase productivity
+          </li>
+        </ul>
+
+
+
+        <h2>The solution</h2>
+
+        <h2>Summary</h2>
+        <p>
+          VanCal is a full stack application with react on the front end and an express.js api
+          on the backend. The express.js application uses mongoDb for the data storage solution.
+          I will be adding an extensive article in the near future about the technologies Van
+          Cal, uses.
+        </p>
+
+        <p>
+          Van Cal has all the positives of Google calendar but none of the draw backs.
+          it has a calendar view similar to the week view of google calendar.
+          When making booking the data is recorded at the right level of atomicity and the
+          information captured during the booking process can be used for record keeping for the
+          business.
+        </p>
+
+        <p>
+          Van Cal integrates with Google calendar. A user can authorise VanCal to view event
+          data from Google calendar this can then be viewed on the calendar view on VanCal to
+          still provide all the benefits of google calendar.
+        </p>
+
+        <p>
+          There is a list view with a table of all the bookings that can be used for managing
+          invoicing. the list can be filtered to see what bookings have not been invoiced yet.
+          the user can then go into a page for managing the individual bookings and generate an
+          invoice which will be stored in the backend of the application they can also email
+          invoice from the application.
+        </p>
+
+
+
+        <h1>A walk through VanCal</h1>
+
+
+        <h2>login</h2>
+
+          <video controls width="800px">
+              <source src={Login} type="video/mp4" />
+          </video>
+
+      </Container>
+      )
+
+
+
+
 }
 
 export default IndexPage
