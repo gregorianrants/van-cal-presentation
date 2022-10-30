@@ -79,7 +79,7 @@ const IndexPage = () => {
                         <li>I strongly recommend reading at least some of this web-page VanCal is a fairly niche app and it may not make sense otherwise</li>
                     </ul>
                     
-                    <Body>You can visit the app at <a href="https://dry-earth-66864.herokuapp.com/list">https://dry-earth-66864.herokuapp.com/list</a></Body>
+                    <Body>You can visit the app at <a href="https://dry-earth-66864.herokuapp.com">https://dry-earth-66864.herokuapp.com</a></Body>
 
                     <h2>Introduction</h2>
 
