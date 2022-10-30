@@ -5,6 +5,9 @@ import GenerateFakeData from '../assets/generate-fake-data.mp4'
 import Tiles from '../assets/tiles.jpg'
 import NativeFeel from '../assets/native-feel.mp4'
 import DragAndDrop from '../assets/drag_and_drop.mp4'
+import GoogleCalendar from '../assets/google_calendar.mp4'
+import AddBusinessDetails from '../assets/add-business-details.mp4'
+import ManageInvoices from '../assets/manage-invoices.mp4'
 import styled from "styled-components";
 import "@fontsource/roboto"
 
@@ -66,7 +69,7 @@ const IndexPage = () => {
                     </Container>
                 </Header>
                 <Container>
-                    <h1>Introduction</h1>
+                    <h2>Introduction</h2>
 
                     <Body>Van Cal is a Web application I built to demonstrate my web development skills. It solves a
                         real world problem I encountered in running my own removals business. The solution provides an
@@ -76,12 +79,12 @@ const IndexPage = () => {
                         their own data.
                     </Body>
 
-                    <h1>The Pre-Existing Solution</h1>
+                    <h3>The Pre-Existing Solution</h3>
 
                     <Body>Prior to VanCal I Used Google Calendar to manage my bookings , it has some great features
                         but also some drawbacks.</Body>
 
-                    <h2>Google Calendar : Pros</h2>
+                    <h4>Google Calendar : Pros</h4>
 
                     <List>
                         <ListItem>It allows colleagues to share their calendars</ListItem>
@@ -94,7 +97,7 @@ const IndexPage = () => {
                         </ListItem>
                     </List>
 
-                    <h2>Google Calendar : Cons</h2>
+                    <h4>Google Calendar : Cons</h4>
 
                     <List>
                         <ListItem>More or less all the information for the booking goes in one field. i need more
@@ -119,9 +122,9 @@ const IndexPage = () => {
                     </List>
 
 
-                    <h2>The Solution</h2>
+                    <h3>The Solution</h3>
 
-                    <h2>Summary</h2>
+
                     <Body>
                         VanCal is a full stack application with react on the front end and an express.js api
                         on the backend. The express.js application uses mongoDb for the data storage solution.
@@ -152,9 +155,9 @@ const IndexPage = () => {
                     </Body>
 
 
-                    <h1>A walk through VanCal</h1>
+                    <h2>A walk through VanCal</h2>
 
-                    <h2>Home Page</h2>
+                    <h3>Home Page</h3>
                     <Body>
                         On first visiting VanCal, prior to logging in a user is presented with the home page, the
                         provides a brief description of what the application does and how it uses data. This page is
@@ -162,7 +165,7 @@ const IndexPage = () => {
                         option to use data from Google Calendar.
                     </Body>
 
-                    <h2>login</h2>
+                    <h3>login</h3>
 
                     <Body>Users can create an email and password account and then sign in with it or they can sign in with their google account.  They can then create and manage data associated with the account they are signed in with.
                     </Body>
@@ -173,7 +176,7 @@ const IndexPage = () => {
                         <source src={Login} type="video/mp4"/>
                     </video>
 
-                    <h2>Creating A Booking</h2>
+                    <h3>Creating A Booking</h3>
                     <Body>To create a booking click on the time slot on the calendar you want the booking to start at
                         and a form is launched to input the rest of the details.  Notice the immediate validation feedback given on the form.</Body>
 
@@ -183,28 +186,60 @@ const IndexPage = () => {
 
                     <Body>The event is added to the calendar immediately on saving this is known as an optimistic update and contributes to giving VanCal a native feel.</Body>
 
-                    <h2>Adding Fake Data</h2>
+                    <h3>Adding Fake Data</h3>
                     <Body>You can add fake data to VanCal to see what the ui will look like in every day use with multiple booking in the calendar </Body>
                     <video controls width="800px">
                         <source src={GenerateFakeData} type="video/mp4"/>
                     </video>
-                    <h2>Custom Tiling Algorithim</h2>
+                    <h3>Custom Tiling Algorithim</h3>
                     <Body>The layout of the tiles in van cal is not possible with any native css layout module.  VanCal uses a custom algorithim to calculate the layout of the tiles and then positions them using absolute positioning.  No 3rd party library was used for laying out the tiles.</Body>
                     <img src={Tiles} alt="" width='800px'/>
-                    <h2>Native App Experience</h2>
+                    <h3>Native App Experience</h3>
                     <Body>
                         VanCal uses optimistic updates, pre-fetching and caching to achieve a native app experience in the video bellow we demonstrate this by switching the week being viewed.  this is just one example, the whole application is built using these techniques and there would be no difference to a user between this application and a desktop application.
                     </Body>
                     <video controls width="800px">
                         <source src={NativeFeel} type="video/mp4"/>
                     </video>
-                    <h2>Drag and drop rescheduling</h2>
+                    <h3>Drag and drop rescheduling</h3>
                     <Body>
                         You can change the time of a job within a day, by dragging and dropping the tile, you can also change the length of the job by
                         changing the tile size by dragging the bottom edge.
                     </Body>
                     <video controls width="800px">
                         <source src={DragAndDrop} type="video/mp4"/>
+                    </video>
+
+                    <h3>Authorizing google calendar</h3>
+                    <Body>
+                        It is possible to authorize van cal to view events from your google calendar, this is done from the settings page.  unlike google calendar van cal shows icons, on the tile, to represent invites to the event.  It uses an envelope for an invite and a tick for an accepted invite.  In my own business i use this to send invites from my google calendar to staff working on a given day. I can then see at a glance who has been invited to work and whether they have accepted.
+                    </Body>
+
+
+                    <video controls width="800px">
+                        <source src={GoogleCalendar} type="video/mp4"/>
+                    </video>
+
+                    <h3>Manage Invoices</h3>
+                    <Body>
+                        Van Cal has a list view of all the bookings from this page we can manage invoicing for the bookings,  first it to add some information about the business using the app in settings, this info will be used for generating the invoices.
+                    </Body>
+
+
+                    <h4>Adding business info in settings</h4>
+                    <video controls width="800px">
+                        <source src={AddBusinessDetails} type="video/mp4"/>
+                    </video>
+                    <h4>creating, sending and viewing status of invoice</h4>
+                    <Body>
+                        The list view shows a list of all the bookings, from there we can access a page to manage the invoices for the job.
+                        first we have to prepare the invoice this simply updates the data for the booking but with stricter validation to make sure all the necessary information is there to create an invoice.  then the invoice is created from the validated details, we can send the email to the customer and this will update the status of the invoice.  the email will show as being sent from the email address provided earlier in settings and any replies will go to that email. it also possible to void the invoice and create a new one.
+                    </Body>
+                    <Body>
+                        The list view is ordered by date of booking and is paginated, it allows filtering bookings by invoice status to enable seeing what bookings need actions taken on them.
+                    </Body>
+                    <video controls width="800px">
+                        <source src={ManageInvoices} type="video/mp4"/>
                     </video>
                 </Container>
             </div>
