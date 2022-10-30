@@ -69,6 +69,18 @@ const IndexPage = () => {
                     </Container>
                 </Header>
                 <Container>
+                    <h2>Check out VanCal</h2>
+                    <Body>
+                        You can check out my app at the link at the bottom of this section but please read at least these points before visiting the app.
+                    </Body>
+                    <ul>
+                        <li>VanCal is for demonstration purposes and is hosted of a free service the intial load will therefore be slow as the app is not constantly running and the server starts up when someone visits the site.</li>
+                        <li>To see the speed it would load in production refresh the page after initial load.</li>
+                        <li>I strongly recommend reading at least some of this web-page VanCal is a fairly niche app and it may not make sense otherwise</li>
+                    </ul>
+                    
+                    <Body>You can visit the app at <a href="https://dry-earth-66864.herokuapp.com/list">https://dry-earth-66864.herokuapp.com/list</a></Body>
+
                     <h2>Introduction</h2>
 
                     <Body>Van Cal is a Web application I built to demonstrate my web development skills. It solves a
