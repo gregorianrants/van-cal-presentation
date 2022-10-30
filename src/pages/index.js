@@ -1,6 +1,10 @@
 import * as React from "react"
 import Login from '../assets/login.mp4'
 import CreatingBooking from '../assets/creating-booking.mp4'
+import GenerateFakeData from '../assets/generate-fake-data.mp4'
+import Tiles from '../assets/tiles.jpg'
+import NativeFeel from '../assets/native-feel.mp4'
+import DragAndDrop from '../assets/drag_and_drop.mp4'
 import styled from "styled-components";
 import "@fontsource/roboto"
 
@@ -180,8 +184,28 @@ const IndexPage = () => {
                     <Body>The event is added to the calendar immediately on saving this is known as an optimistic update and contributes to giving VanCal a native feel.</Body>
 
                     <h2>Adding Fake Data</h2>
-                    <Body>VanCal makes more sense when it has a bunch of data.  We can add fake data from the settings page.</Body>
-
+                    <Body>You can add fake data to VanCal to see what the ui will look like in every day use with multiple booking in the calendar </Body>
+                    <video controls width="800px">
+                        <source src={GenerateFakeData} type="video/mp4"/>
+                    </video>
+                    <h2>Custom Tiling Algorithim</h2>
+                    <Body>The layout of the tiles in van cal is not possible with any native css layout module.  VanCal uses a custom algorithim to calculate the layout of the tiles and then positions them using absolute positioning.  No 3rd party library was used for laying out the tiles.</Body>
+                    <img src={Tiles} alt="" width='800px'/>
+                    <h2>Native App Experience</h2>
+                    <Body>
+                        VanCal uses optimistic updates, pre-fetching and caching to achieve a native app experience in the video bellow we demonstrate this by switching the week being viewed.  this is just one example, the whole application is built using these techniques and there would be no difference to a user between this application and a desktop application.
+                    </Body>
+                    <video controls width="800px">
+                        <source src={NativeFeel} type="video/mp4"/>
+                    </video>
+                    <h2>Drag and drop rescheduling</h2>
+                    <Body>
+                        You can change the time of a job within a day, by dragging and dropping the tile, you can also change the length of the job by
+                        changing the tile size by dragging the bottom edge.
+                    </Body>
+                    <video controls width="800px">
+                        <source src={DragAndDrop} type="video/mp4"/>
+                    </video>
                 </Container>
             </div>
         </>
