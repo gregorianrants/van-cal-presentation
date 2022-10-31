@@ -112,7 +112,7 @@ const IndexPage = () => {
                             <ListItem>To see the speed it would load in production refresh the page after initial
                                 load.</ListItem>
                             <ListItem>I strongly recommend reading at least some of this web-page, VanCal is a fairly
-                                niche app and it may not make sense otherwise</ListItem>
+                                niche app and it may not make sense otherwise.</ListItem>
                         </List>
 
                         <Body>You can visit the app at <a
@@ -151,7 +151,7 @@ const IndexPage = () => {
                                 invite.</ListItem>
                             <ListItem>The week view has a very nice layout which communicates a lot of info at a glance
                                 and
-                                helps with scheduling new bookings
+                                helps with scheduling new bookings.
                             </ListItem>
                         </List>
                     </Section>
@@ -162,8 +162,8 @@ const IndexPage = () => {
                             <ListItem>More or less all the information for the booking goes in one field. I need more
                                 atomicity with certain pieces of data e.g. storing the bill amount.
                             </ListItem>
-                            <ListItem>The lack of atomic fields means i also need to maintain a seperate spread sheet of
-                                bookings to keep records and manage invoicing
+                            <ListItem>The lack of atomic fields means i also need to maintain a separate spread sheet of
+                                bookings to keep records and manage invoicing.
                             </ListItem>
                             <ListItem>This leads to a lot of duplicated data and the following associated problems:
                                 <NestedList>
