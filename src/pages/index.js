@@ -238,9 +238,11 @@ const IndexPage = () => {
                             as we haven't created any data thus far. Dont worry though we will get the the exciting stuff
                             soon.</Body>
 
-                        <video controls width="800px">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/gLqPIQUVOek?si=C6b7SRJSmkqj2NGz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                        {/* <video controls width="800px">
                             <source src={Login} type="video/mp4"/>
-                        </video>
+                        </video> */}
                     </Section>
 
                     <Section>
