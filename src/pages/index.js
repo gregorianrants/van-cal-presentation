@@ -39,9 +39,28 @@ const GlobalStyle = createGlobalStyle`
     margin-top: 1.3rem;
     margin-bottom: 1.3rem;
   }
+/* Set your aspect ratio */
+.video-container {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding-bottom: 56.25%; /* creates a 16:9 aspect ratio */
+}
 
-  iframe{
+.video-container iframe,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  max-width: 100%;
+}
+
+/* And set the max-width of the parent element */
+.video-wrap {
+  width: 100%;
+  max-width: 600px;
 }
 `
 const Section = styled.div`
@@ -91,6 +110,17 @@ const NestedListItem = styled.li`
 const ListItem = styled.li`
   margin-bottom: 0.6rem;
 `
+
+const Video = ()=>{
+    return (
+        <div class="video-wrap">
+                        <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/gLqPIQUVOek?si=C6b7SRJSmkqj2NGz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        </div>
+    )
+}
+
 
 // markup
 const IndexPage = () => {
@@ -242,9 +272,8 @@ const IndexPage = () => {
                         <Body>On logging in the user is redirected to the calendar page there isn't much to see here yet
                             as we haven't created any data thus far. Dont worry though we will get the the exciting stuff
                             soon.</Body>
-
-                        <iframe src="https://www.youtube.com/embed/gLqPIQUVOek?si=C6b7SRJSmkqj2NGz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+                        <Video />
+                        
                         {/* <video controls width="800px">
                             <source src={Login} type="video/mp4"/>
                         </video> */}
