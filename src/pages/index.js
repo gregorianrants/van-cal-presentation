@@ -1,13 +1,14 @@
 import * as React from "react"
-import Login from '../assets/login.mp4'
-import CreatingBooking from '../assets/creating-booking.mp4'
-import GenerateFakeData from '../assets/generate-fake-data.mp4'
 import Tiles from '../assets/tiles.jpg'
-import NativeFeel from '../assets/native-feel.mp4'
-import DragAndDrop from '../assets/drag_and_drop.mp4'
-import GoogleCalendar from '../assets/google_calendar.mp4'
-import AddBusinessDetails from '../assets/add-business-details.mp4'
-import ManageInvoices from '../assets/manage-invoices.mp4'
+// import Login from '../assets/login.mp4'
+// import CreatingBooking from '../assets/creating-booking.mp4'
+// import GenerateFakeData from '../assets/generate-fake-data.mp4'
+
+// import NativeFeel from '../assets/native-feel.mp4'
+// import DragAndDrop from '../assets/drag_and_drop.mp4'
+// import GoogleCalendar from '../assets/google_calendar.mp4'
+// import AddBusinessDetails from '../assets/add-business-details.mp4'
+// import ManageInvoices from '../assets/manage-invoices.mp4'
 import styled from "styled-components";
 import "@fontsource/roboto"
 
@@ -38,6 +39,10 @@ const GlobalStyle = createGlobalStyle`
     margin-top: 1.3rem;
     margin-bottom: 1.3rem;
   }
+
+  iframe{
+  width: 100%;
+}
 `
 const Section = styled.div`
   
@@ -250,9 +255,9 @@ const IndexPage = () => {
                         <Body>To create a booking click on the time slot on the calendar you want the booking to start
                             at and a form is launched to input the rest of the details. Notice the immediate validation feedback given on the form.  The Validation isn't strict at this point as the information for the booking make be received incrementally.  More strict validation is used later on when creating an invoice from the booking.</Body>
 
-                        <video controls width="800px">
+                        {/* <video controls width="800px">
                             <source src={CreatingBooking} type="video/mp4"/>
-                        </video>
+                        </video> */}
 
                         <Body>The event is added to the calendar immediately on saving this is known as an optimistic
                             update and contributes to giving VanCal a native feel.</Body>
@@ -261,9 +266,9 @@ const IndexPage = () => {
                         <h3>Adding Fake Data</h3>
                         <Body>You can add fake data to VanCal to see what the ui will look like in every day use with
                             multiple booking in the calendar </Body>
-                        <video controls width="800px">
+                        {/* <video controls width="800px">
                             <source src={GenerateFakeData} type="video/mp4"/>
-                        </video>
+                        </video> */}
                     </Section>
 
                     <Section>
@@ -283,9 +288,9 @@ const IndexPage = () => {
                             example, the whole application is built using these techniques and there would be no
                             difference, in experience, to a user between this application and a native desktop application.
                         </Body>
-                        <video controls width="800px">
+                        {/* <video controls width="800px">
                             <source src={NativeFeel} type="video/mp4"/>
-                        </video>
+                        </video> */}
                     </Section>
 
                     <Section>
@@ -295,9 +300,9 @@ const IndexPage = () => {
                             also change the length of the job by
                             changing the tile size by dragging the bottom edge.
                         </Body>
-                        <video controls width="800px">
+                        {/* <video controls width="800px">
                             <source src={DragAndDrop} type="video/mp4"/>
-                        </video>
+                        </video> */}
                     </Section>
 
                     <Section>
@@ -312,9 +317,9 @@ const IndexPage = () => {
                         </Body>
 
 
-                        <video controls width="800px">
+                        {/* <video controls width="800px">
                             <source src={GoogleCalendar} type="video/mp4"/>
-                        </video>
+                        </video> */}
                     </Section>
 
                     <Section>
@@ -329,9 +334,9 @@ const IndexPage = () => {
 
                     <Section>
                         <h4>Adding Business Info In Settings</h4>
-                        <video controls width="800px">
+                        {/* <video controls width="800px">
                             <source src={AddBusinessDetails} type="video/mp4"/>
-                        </video>
+                        </video> */}
                     </Section>
                     <Section>
                         <h4>Creating, Sending And Viewing Status Of Invoices</h4>
@@ -347,9 +352,9 @@ const IndexPage = () => {
                             The list view is ordered by date of booking and is paginated, it allows filtering bookings
                             by invoice status to enable seeing what bookings need actions taken on them.
                         </Body>
-                        <video controls width="800px">
+                        {/* <video controls width="800px">
                             <source src={ManageInvoices} type="video/mp4"/>
-                        </video>
+                        </video> */}
                     </Section>
 
                 </Container>
